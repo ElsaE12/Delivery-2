@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Mulish:wght@400;700&display=swap');
+
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f1d79e;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container with 12-column grid */
+.container {
+    max-width: 1200px;
+    padding: 0 20px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+}
+
+/* Align all sections with a consistent left margin */
+.header, .first-section, .final-section {
+    grid-column: span 12;
+    margin-bottom: 50px;
+    padding-left: 20px; /* This ensures left alignment across sections */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 20px;
+}
+
+.header-content {
+    flex: 1;
+}
+
+.header h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #d28d16;
+}
+
+.header p {
+    font-size: 1.1em;
+}
+
+/* Lien Instagram légèrement décalé à droite */
+.instagram-link {
+    padding: 1em; /* Enlève tout remplissage indésirable */
+    text-align: left; /* S'assure que le texte est aligné à gauche */
+}
+
+.instagram-link a {
+    color: #333;
+    text-decoration: none;
+    transition-property: color;
+    transition-duration: 0.3s;
+}
+
+.instagram-link a:hover {
+    color: #555;
+}
+
+/* First Section */
+.first-section {
+    text-align: left;
+}
+
+.wrapped-title {
+    font-size: 2em;
+    margin-bottom: 10px;
+    text-transform: capitalize;
+    color: #333;
+    width: 30%; /* Envelopper le titre dans une largeur de 30% */
+}
+
+.wrapped-text {
+    font-size: 1.1em;
+    color: #333;
+    width: 30%; /* Envelopper le texte dans une largeur de 30% */
+    line-height: 1.4; /* Ajuster l'espacement des lignes */
+}
+
+/* Activities Text Style */
+.activities-text {
+    grid-column: span 12; /* Prendre toute la largeur de la grille */
+    text-align: left; /* Aligner le texte à gauche */
+    margin-top: 20px; /* Espacement au-dessus du texte */
+    padding-left: 20px; /* Ajouter un padding à gauche si nécessaire */
+}
+
+.activities-text p {
+    font-family: 'Roboto', sans-serif; /* Utiliser la même police que le reste */
+    font-size: 1.2em; /* Ajuster la taille de la police */
+    font-weight: 700; /* Mettre en gras */
+    color: #333; /* Couleur du texte */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+/* Image Grid */
+.image-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.image-item {
+    flex: 1;
+    position: relative;
+}
+
+.image-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: 5px solid #333;
+    transition-property: transform, border-radius;
+    transition-duration: 0.3s;
+}
+
+.image-item img:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+}
+
+
+/* Final Section */
+.final-section {
+    text-align: left; /* Aligner le texte à gauche */
+    margin-top: 30px;
+}
+
+.final-header,
+.final-description {
+    font-size: 1.2em; /* Même taille pour le texte */
+    font-weight: 700; /* Mettre en gras */
+    color: #333; /* Couleur du texte */
+    margin: 0; /* Supprimer les marges par défaut */
+}
+
+
+/* Centrage de l'image */
+.image-item.centered {
+    grid-column: span 12; /* L'image prend toute la largeur de la grille */
+    display: flex; /* Utilisation de flex pour centrer l'image */
+    justify-content: center; /* Centre l'image horizontalement */
+}
+
+.image-item.centered img {
+    max-width: 100%; /* S'assurer que l'image ne dépasse pas son conteneur */
+    height: auto; /* Pour garder le ratio de l'image */
+}
+
+/* Footer */
+.footer {
+    grid-column: span 12;
+    background-color: #000000;
+    color: #333;
+    padding: 60px;
+    text-align: left;
+}
+
+/* Responsive Breakpoint for 768px */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .image-grid {
+        flex-direction: column;
+    }
+
+    .image-item img {
+        height: auto;
+    }
+
+    p.description {
+        font-size: 0.9em;
+    }
+
+   
+}
